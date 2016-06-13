@@ -20,7 +20,7 @@
     "optimist": "*"
   },
   "scripts": {
-    "start": "coffee index.cofeee"
+    "start": "coffee index.coffee"
   },
   "main": "index.coffee",
   "repository": {
