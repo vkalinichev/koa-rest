@@ -1,0 +1,40 @@
+{
+  "name": "koa-rest",
+  "version": "0.0.1",
+  "description": "Simple Koa REST Application",
+  "author": "Vladimir Kalinichev <wrumly@gmail.com>",
+  "directories": {
+    "lib": "./app/controllers",
+    "test": "./test"
+  },
+  "dependencies": {
+    "config": "*",
+    "koa": "*",
+    "koa-router": "*",
+    "koa-render": "*",
+    "koa-bodyparser": "*"
+  },
+  "devDependencies": {
+    "jasmine-node": "*",
+    "co": "*",
+    "optimist": "*"
+  },
+  "scripts": {
+    "start": "coffee index.cofeee"
+  },
+  "main": "index.coffee",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkalinichev/koa-rest.git"
+  },
+  "keywords": [
+    "koa",
+    "rest",
+    "boilerplate"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkalinichev/koa-rest/issues"
+  },
+  "homepage": "https://github.com/vkalinichev/koa-rest#readme"
+}
