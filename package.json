@@ -4,23 +4,22 @@
   "description": "Simple Koa REST Application",
   "author": "Vladimir Kalinichev <wrumly@gmail.com>",
   "directories": {
-    "lib": "./app/controllers",
     "test": "./test"
   },
   "dependencies": {
-    "config": "*",
-    "koa": "*",
-    "koa-router": "*",
-    "koa-render": "*",
-    "koa-bodyparser": "*"
+    "coffee-script": "^1.10.0",
+    "config": "^1.21.0",
+    "koa": "^1.2.0",
+    "koa-bodyparser": "^2.2.0",
+    "koa-router": "^5.4.0"
   },
   "devDependencies": {
-    "jasmine-node": "*",
-    "co": "*",
-    "optimist": "*"
+    "chai": "^3.5.0",
+    "co-mocha": "^1.1.2"
   },
   "scripts": {
-    "start": "coffee index.coffee"
+    "start": "coffee index.coffee",
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
   "main": "index.coffee",
   "repository": {
