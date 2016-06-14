@@ -1,15 +1,16 @@
-Router = require 'koa-router'
-usersController = require '../controllers/indexController'
+Router = require "koa-router"
+BaseController = require "../controllers/base_controller"
+baseController = new BaseController
 
 module.exports = ( app )->
 
     router = new Router()
 
     router
-        .get( '/users', usersController.list )
-        .get( '/users/:id', usersController.getId )
-        .post( '/users/', usersController.createItem )
-        .put( '/users/:id', usersController.updateItem )
-        .delete( '/users/:id', usersController.removeItem )
+        .get "/users", baseController.list
+        .get "/users/:id", baseController.get
+        .post "/users/", baseController.create
+        .put "/users/:id", baseController.update
+        .delete "/users/:id", baseController.delete
 
     app.use router.middleware()

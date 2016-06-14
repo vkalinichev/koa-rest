@@ -1,24 +1,20 @@
-db = [
-    { id:0, name: "test0" }
-    { id:1, name: "test1" }
-    { id:2, name: "test2" }
-]
+db = require "../fixtures/users"
 
 module.exports =
 
-    getAll: ->
+    list: ->
         db
 
-    getById: ( id )->
+    get: ( id )->
         db[ +id ]
 
-    setNewId: ( name )->
+    create: ( name )->
         length = db.length
         db.push id: length, name: name
         db[ length ]
 
-    updateId: ( id, name )->
+    update: ( id, name )->
         db[ +id ] = id: +id, name: name
 
-    removeId: ( id )->
+    delete: ( id )->
         delete db[ +id ]

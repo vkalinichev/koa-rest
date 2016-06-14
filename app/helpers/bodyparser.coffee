@@ -1,4 +1,4 @@
-bodyParser = require 'koa-bodyparser'
+bodyParser = require "koa-bodyparser"
 
-module.exports = (app)->
+module.exports = ( app )->
     app.use bodyParser()
