@@ -1,20 +1,27 @@
-db = require "../fixtures/users"
+module.exports = ( dbName )=>
 
-module.exports =
+    try
+        data = require "../fixtures/#{ dbName }"
+    catch error
+        data = []
+        console.log error
 
-    list: ->
-        db
+    {
+        list: ->
+            data
 
-    get: ( id )->
-        db[ +id ]
+        get: (id)->
+            data[+id]
 
-    create: ( name )->
-        length = db.length
-        db.push id: length, name: name
-        db[ length ]
+        create: (name)->
+            length = data.length
+            data.push id: length, name: name
+            data[length]
 
-    update: ( id, name )->
-        db[ +id ] = id: +id, name: name
+        update: (id, name)->
+            data[+id] =
+                id: +id, name: name
 
-    delete: ( id )->
-        delete db[ +id ]
+        delete: (id)->
+            delete data[+id]
+    }
