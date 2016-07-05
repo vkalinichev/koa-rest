@@ -1,7 +1,7 @@
 module.exports = ( dbName )=>
 
     try
-        data = require "../fixtures/#{ dbName }"
+        data = require "../../fixtures/#{ dbName }"
     catch error
         data = []
         console.log error

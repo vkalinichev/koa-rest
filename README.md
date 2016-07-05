@@ -1,1 +1,1 @@
-A simple Koajs REST Application
+A simple Koajs REST boilerplate
